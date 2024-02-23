@@ -1,0 +1,66 @@
+@use '../../styles/core' as core;
+@use '../../styles/color' as color;
+
+.task1 {
+  position: relative;
+  margin: auto;
+  strong {
+    font-weight: bold;
+  }
+
+  .searchBar {
+    border: 1px solid color.$white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .searchWrapper {
+      display: flex;
+      align-items: center;
+
+      input {
+        background-color: inherit;
+        border: none;
+        margin-left: 10px;
+        color: color.$white;
+
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          color: color.$white;
+        }
+      }
+
+      .icon {
+        height: core.$space * 3;
+        width: core.$space * 3;
+      }
+    }
+  }
+
+  .results {
+    position: absolute;
+    margin-top: 10px;
+    width: 100%;
+    background-color: color.$dark-grey-3;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow: hidden;
+    z-index: 9;
+
+    .result {
+      padding: 5px 15px;
+      cursor: pointer;
+      &:hover {
+        background-color: color.$dark-grey-2;
+        border-radius: inherit;
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid color.$white;
+      }
+    }
+  }
+}
