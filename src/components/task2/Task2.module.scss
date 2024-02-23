@@ -1,0 +1,77 @@
+@use '../../styles/core' as core;
+@use '../../styles/color' as color;
+@use '../../styles/typography' as typography;
+
+.task2 {
+  .noSearch {
+    @include typography.heading1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5rem;
+  }
+
+  .search {
+    margin-top: 2rem;
+
+    .searchTitle {
+      @include typography.heading2;
+      margin: 20px 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 40px;
+    }
+
+    .carCard {
+      position: relative;
+      margin: 0 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+
+      .placeholder {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background-color: color.$dark-grey-3;
+        border-radius: 5px;
+        height: 450px;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+        border-radius: 5px;
+      }
+
+      &:hover .overlay {
+        opacity: 1; /* Show overlay on hover */
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        .info {
+          display: flex;
+          justify-content: space-evenly;
+          padding: 15px;
+          position: absolute;
+          width: 100%;
+          top: 90%;
+          background-color: color.$dark-grey-3;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+      }
+    }
+  }
+}

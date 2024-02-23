@@ -158,7 +158,7 @@ Password: Motorway
 The goal of the test is to prove your understanding of the concepts of modern HTML/CSS/JS, but not to produce something production ready or pixel perfect.
 Your work will be tested in the browser of your choice, so please specify this when submitting. This can include pre-release browsers such as Chrome Canary or Safari Technology Preview if you want to work with experimental features.
 
-## Dev notes
+## Dev notes 🪄
 
 This tasks was developed using Google Chrome.
 
@@ -169,20 +169,30 @@ Task1:
   - Install package `react-router-dom` and create routes
   - Test useSearchParams and navigate
 
-- Create a search bar and a dropdown in task1
+- Create search bar and dropdown components (max 6 tags\*\*\*) in task1
   - Install `usehooks-ts` for useful hooks like debounce and clickoutside
   - Create service. One method using generic types can be adaptable for both endpoints
   - Install `react-query`for making efficient calls. UseEffect is not always the best way to fetch data
 
 Task2:
 
-- Lazy load images
-  https://www.freecodecamp.org/news/how-to-lazy-load-images-in-react/
+- Implement a basic landing page
+- Call `/cars` enpoint whenever the url changes
+- Create list and card components in task2
+- Lazy load images https://www.freecodecamp.org/news/how-to-lazy-load-images-in-react/
+- Install `react-lazy-load-image-component` - quite easy to mimic the image placeholders from the desings
+
+Bonus track:
+
+- I understand from the designs that whenever there is a hover on an image, a submenu (with very basic animation) is displayed. I did this using `framer-motion` with an overlay.
 
 NPM Package
 https://www.npmjs.com/package/react-lazy-load-image-component
 
 ### Potential Improvements
 
-- Have blur images for lazy loading
+- Each component should have its own scss module
 - When clicking close button in search bar, reset url
+- Have blur images for lazy loading
+- Add history push to be able to go back to previous searches
+- More to be discussed 🌝
